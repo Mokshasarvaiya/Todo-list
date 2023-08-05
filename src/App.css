@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f7f7f7;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #444;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100dvh;
+}
+
+.center-container {
+  max-width: 400px;
+  width: 90%;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  display: grid;
+  gap: 16px;
+  margin-block: 10px;
+}
+
+.app-heading {
+  text-align: center;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #316fc1;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.input-box-todo {
+  flex: 1;
+  height: 40px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 0 16px;
+  outline: none;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.input-box-todo:focus {
+  border-color: #316fc1;
+}
+
+.add-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: #316fc1;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.add-btn:hover {
+  background-color: #285eaa;
+  transform: scale(1.1);
+}
+
+.list-container {
+  max-height: 300px; /* Limit the height of the list container */
+  overflow-y: auto; /* Enable vertical scroll when content overflows */
+  display: flex;
+  flex-direction: column;
+}
+
+.list-item {
+  list-style-type: none;
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  color: #444;
+  padding: 10px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.icons {
+  margin-left: auto;
+}
+
+.icons i {
+  margin: 4px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.icons i:hover {
+  transform: scale(1.2);
+}
+
+.icon-delete:hover {
+  color: #e74c3c;
+}
+
+.icon-edit:hover {
+  color: #27ae60;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.list-item-enter {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.edit-input {
+  flex: 1;
+  height: 30px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 0 16px;
+  outline: none;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.edit-input:focus {
+  border-color: #316fc1;
+}
+
+@media screen and (max-width: 320px) {
+  .app-heading {
+    font-size: 20px;
+  }
+
+  .input-box-todo {
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .add-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+
+  .list-item {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .edit-input {
+    height: 25px;
+    font-size: 12px;
+  }
+}
