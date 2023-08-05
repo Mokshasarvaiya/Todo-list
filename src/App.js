@@ -40,9 +40,10 @@ function App() {
   return (
     <div className="main-container">
       <div className="center-container">
-        <TodoInput addList={addList} />
-        <h1 className="app-heading">TODO</h1>
+
+        <h1 className="app-heading">ToDo-list</h1>
         <hr />
+        <TodoInput addList={addList} />
         {listTodo.map((listItem, i) => {
           return (
             <List key={i} index={i} item={listItem} deleteItem={deleteListItem} editItem={addList} />
